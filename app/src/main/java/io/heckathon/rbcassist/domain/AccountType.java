@@ -12,17 +12,12 @@ public class AccountType implements Serializable {
 		return accountTypeId;
 	}
 
-	public void setAccountTypeId(String accountTypeId) {
-		this.accountTypeId = accountTypeId;
-	}
-
 	public String getAccountType() {
 		return accountType;
 	}
 
-	public void setAccountType(String accountType) {
+	public AccountType(String accountTypeId, String accountType) {
+		this.accountTypeId = accountTypeId;
 		this.accountType = accountType;
 	}
-	
-	
 }

@@ -3,4 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="edit_text_height">20dp</dimen>
+    <dimen name="text_view_text_size">20dp</dimen>
+    <color name="application_text_color">#000</color>
+    <color name="alert_text_color">#f00</color>
 </resources>

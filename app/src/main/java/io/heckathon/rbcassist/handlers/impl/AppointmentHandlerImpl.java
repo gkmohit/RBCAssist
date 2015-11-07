@@ -6,6 +6,7 @@ import io.heckathon.rbcassist.domain.Customer;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class AppointmentHandlerImpl {
@@ -126,5 +127,19 @@ public class AppointmentHandlerImpl {
 		return null;
 	}
 
+
+	public static void addAppointment(String customerId, String agentId, String serviceId, String location, Date date){
+
+		Customer customer = getCustomer(customerId);
+		Appointment appointment3 = new Appointment();
+		appointment3.setAppointmentId(appointmentCounter++);
+		appointment3.setAgentId(agentId);
+		appointment3.setLocation(location);
+		appointment3.setServiceTypeId(serviceId);
+		appointment3.setCustomerId(customerId);
+		appointment3.setDate(date);
+
+		customer.getAppointments().add(appointment3);
+	}
 
 }

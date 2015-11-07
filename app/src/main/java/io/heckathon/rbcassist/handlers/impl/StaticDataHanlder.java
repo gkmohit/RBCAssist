@@ -22,4 +22,14 @@ public class StaticDataHanlder {
 	public static List<ServiceType> getServiceList(){
 		return serviceList;
 	}
+
+	public static String getServiceType (String serviceTypeId ){
+		for(ServiceType service: serviceList){
+			if(service.getServiceTypeId().equalsIgnoreCase(serviceTypeId)) {
+				return service.getServiceType();
+			}
+		}
+
+		return null;
+	}
 }

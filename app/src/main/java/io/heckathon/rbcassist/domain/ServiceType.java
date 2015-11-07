@@ -1,6 +1,8 @@
 package io.heckathon.rbcassist.domain;
 
-public class ServiceType {
+import java.io.Serializable;
+
+public class ServiceType implements Serializable {
 	
 	private String serviceTypeId;
 	

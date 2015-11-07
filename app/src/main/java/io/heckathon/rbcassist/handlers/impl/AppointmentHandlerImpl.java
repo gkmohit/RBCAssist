@@ -51,6 +51,7 @@ public class AppointmentHandlerImpl {
 		Appointment appointment1 = new Appointment();
 		appointment1.setAppointmentId(appointmentCounter++);
 		appointment1.setAgentId(agent1.getAgentId());
+		appointment1.setAgentName(agent1.getFirstName() + " " + agent1.getLastName());
 		appointment1.setServiceTypeId("1");
 		appointment1.setCustomerId(customer1.getCustomerId());
 		Calendar cal1 = Calendar.getInstance();
@@ -60,6 +61,7 @@ public class AppointmentHandlerImpl {
 		Appointment appointment2 = new Appointment();
 		appointment2.setAppointmentId(appointmentCounter++);
 		appointment2.setAgentId(agent1.getAgentId());
+		appointment2.setAgentName(agent1.getFirstName() + " " + agent1.getLastName());
 		appointment2.setServiceTypeId("1");
 		appointment2.setCustomerId(customer1.getCustomerId());
 		Calendar cal2 = Calendar.getInstance();

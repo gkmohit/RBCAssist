@@ -8,6 +8,10 @@ public class Appointment implements Serializable, Comparable<Appointment> {
 	private int appointmentId;
 	
 	private String agentId;
+
+	private String agentName;
+
+	private String location;
 	
 	private String customerId;
 	
@@ -51,6 +55,22 @@ public class Appointment implements Serializable, Comparable<Appointment> {
 
 	public String getServiceTypeId() {
 		return serviceTypeId;
+	}
+
+	public String getAgentName() {
+		return agentName;
+	}
+
+	public void setAgentName(String agentName) {
+		this.agentName = agentName;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
 	public void setServiceTypeId(String serviceTypeId) {

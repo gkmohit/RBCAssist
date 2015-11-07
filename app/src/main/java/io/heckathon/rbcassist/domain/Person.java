@@ -1,8 +1,10 @@
 package io.heckathon.rbcassist.domain;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.io.Serializable;
+import java.util.Set;
 
 public class Person implements Serializable {
 	
@@ -14,9 +16,9 @@ public class Person implements Serializable {
 	
 	private String password;
 	
-	private List<Appointment> appointments  = new ArrayList<Appointment>();
+	private Set<Appointment> appointments  = new HashSet<Appointment>();
 
-	private List<Appointment> completedAppointments  = new ArrayList<Appointment>();
+	private Set<Appointment> completedAppointments  = new HashSet<Appointment>();
 
 	public String getFirstName() {
 		return firstName;
@@ -50,19 +52,19 @@ public class Person implements Serializable {
 		this.password = password;
 	}
 
-	public List<Appointment> getAppointments() {
+	public Set<Appointment> getAppointments() {
 		return appointments;
 	}
 
-	public void setAppointments(List<Appointment> appointments) {
+	public void setAppointments(Set<Appointment> appointments) {
 		this.appointments = appointments;
 	}
 
-	public List<Appointment> getCompletedAppointments() {
+	public Set<Appointment> getCompletedAppointments() {
 		return completedAppointments;
 	}
 
-	public void setCompletedAppointments(List<Appointment> completedAppointments) {
+	public void setCompletedAppointments(Set<Appointment> completedAppointments) {
 		this.completedAppointments = completedAppointments;
 	}
 }

@@ -54,7 +54,7 @@ public class AppointmentHandlerImpl {
 		appointment1.setServiceTypeId("1");
 		appointment1.setCustomerId(customer1.getCustomerId());
 		Calendar cal1 = Calendar.getInstance();
-		cal1.set(2015, 11, 30, 12, 30, 00);
+		cal1.set(2015, 11, 30, 12, 30, 0);
 		appointment1.setDate(cal1.getTime());
 
 		Appointment appointment2 = new Appointment();
@@ -63,14 +63,36 @@ public class AppointmentHandlerImpl {
 		appointment2.setServiceTypeId("1");
 		appointment2.setCustomerId(customer1.getCustomerId());
 		Calendar cal2 = Calendar.getInstance();
-		cal2.set(2015, 11, 29, 11, 30, 00);
-		appointment1.setDate(cal1.getTime());
+		cal2.set(2015, 11, 29, 11, 30, 0);
+		appointment2.setDate(cal2.getTime());
 
-		customer1.getAppointments().add(appointment1);
-		customer1.getAppointments().add(appointment2);
+		Appointment appointment3 = new Appointment();
+		appointment3.setAppointmentId(appointmentCounter++);
+		appointment3.setAgentId(agent1.getAgentId());
+		appointment3.setServiceTypeId("1");
+		appointment3.setCustomerId(customer1.getCustomerId());
+		Calendar cal3 = Calendar.getInstance();
+		cal3.set(2015, 11, 30, 12, 30, 0);
+		appointment3.setDate(cal3.getTime());
 
-		agent1.getAppointments().add(appointment1);
-		agent1.getAppointments().add(appointment2);
+		Appointment appointment4 = new Appointment();
+		appointment4.setAppointmentId(appointmentCounter++);
+		appointment4.setAgentId(agent1.getAgentId());
+		appointment4.setServiceTypeId("1");
+		appointment4.setCustomerId(customer1.getCustomerId());
+		Calendar cal4 = Calendar.getInstance();
+		cal4.set(2015, 11, 29, 11, 30, 0);
+		appointment4.setDate(cal4.getTime());
+
+		customer1.getCompletedAppointments().add(appointment1);
+		customer1.getCompletedAppointments().add(appointment2);
+		customer1.getAppointments().add(appointment3);
+		customer1.getAppointments().add(appointment4);
+
+		agent1.getCompletedAppointments().add(appointment1);
+		agent1.getCompletedAppointments().add(appointment2);
+		agent1.getAppointments().add(appointment3);
+		agent1.getAppointments().add(appointment4);
 
 		customerList.add(customer1);
 		customerList.add(customer2);

@@ -3,7 +3,7 @@ package io.heckathon.rbcassist.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Appointment implements Serializable {
+public class Appointment implements Serializable, Comparable<Appointment> {
 	
 	private int appointmentId;
 	
@@ -63,5 +63,10 @@ public class Appointment implements Serializable {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	@Override
+	public int compareTo(Appointment another) {
+		return this.getDate().compareTo(another.getDate());
 	}
 }

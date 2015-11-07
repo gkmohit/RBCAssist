@@ -15,6 +15,8 @@ public class Appointment implements Serializable {
 	
 	private Date date;
 
+	private String status;
+
 	public int getAppointmentId() {
 		return appointmentId;
 	}
@@ -54,7 +56,12 @@ public class Appointment implements Serializable {
 	public void setServiceTypeId(String serviceTypeId) {
 		this.serviceTypeId = serviceTypeId;
 	}
-	
-	
-		
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 }

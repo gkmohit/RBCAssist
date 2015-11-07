@@ -1,8 +1,9 @@
 package io.heckathon.rbcassist.domain;
 
 import java.util.List;
+import java.io.Serializable;
 
-public class Person {
+public class Person implements Serializable {
 	
 	private String firstName;
 	

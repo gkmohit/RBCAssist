@@ -1,6 +1,8 @@
 package io.heckathon.rbcassist.domain;
 
-public class AccountType {
+import java.io.Serializable;
+
+public class AccountType implements Serializable {
 	
 	private String accountTypeId;
 	

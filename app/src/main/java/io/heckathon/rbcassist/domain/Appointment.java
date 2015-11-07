@@ -1,8 +1,9 @@
 package io.heckathon.rbcassist.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Appointment {
+public class Appointment implements Serializable {
 	
 	private int appointmentId;
 	

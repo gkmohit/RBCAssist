@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 public class AppointmentHandlerImpl {
 
@@ -52,7 +53,7 @@ public class AppointmentHandlerImpl {
 		Appointment appointment1 = new Appointment();
 		appointment1.setAppointmentId(appointmentCounter++);
 		appointment1.setAgentId(agent1.getAgentId());
-		appointment1.setAgentName(agent1.getFirstName() + " " + agent1.getLastName());
+		appointment1.setAgentName(getAgentName(agent1.getAgentId()));
 		appointment1.setServiceTypeId("1");
 		appointment1.setCustomerId(customer1.getCustomerId());
 		Calendar cal1 = Calendar.getInstance();
@@ -62,7 +63,7 @@ public class AppointmentHandlerImpl {
 		Appointment appointment2 = new Appointment();
 		appointment2.setAppointmentId(appointmentCounter++);
 		appointment2.setAgentId(agent1.getAgentId());
-		appointment2.setAgentName(agent1.getFirstName() + " " + agent1.getLastName());
+		appointment2.setAgentName(getAgentName(agent2.getAgentId()));
 		appointment2.setServiceTypeId("1");
 		appointment2.setCustomerId(customer1.getCustomerId());
 		Calendar cal2 = Calendar.getInstance();
@@ -72,6 +73,7 @@ public class AppointmentHandlerImpl {
 		Appointment appointment3 = new Appointment();
 		appointment3.setAppointmentId(appointmentCounter++);
 		appointment3.setAgentId(agent1.getAgentId());
+		appointment3.setAgentName(getAgentName(agent1.getAgentId()));
 		appointment3.setServiceTypeId("1");
 		appointment3.setCustomerId(customer1.getCustomerId());
 		Calendar cal3 = Calendar.getInstance();
@@ -80,7 +82,7 @@ public class AppointmentHandlerImpl {
 
 		Appointment appointment4 = new Appointment();
 		appointment4.setAppointmentId(appointmentCounter++);
-		appointment4.setAgentId(agent1.getAgentId());
+		appointment3.setAgentName(getAgentName(agent2.getAgentId()));
 		appointment4.setServiceTypeId("1");
 		appointment4.setCustomerId(customer1.getCustomerId());
 		Calendar cal4 = Calendar.getInstance();
@@ -127,6 +129,12 @@ public class AppointmentHandlerImpl {
 		return null;
 	}
 
+	public static void deleteAppointment(String customerId, String appointmentId){
+
+		Customer customer = getCustomer(customerId);
+		Set<Appointment> appointments = customer.getAppointments();
+		appointments.remove(appointmentId);
+	}
 
 	public static void addAppointment(String customerId, String agentId, String serviceId, String location, Date date){
 
@@ -137,9 +145,20 @@ public class AppointmentHandlerImpl {
 		appointment3.setLocation(location);
 		appointment3.setServiceTypeId(serviceId);
 		appointment3.setCustomerId(customerId);
+		appointment3.setAgentName(getAgentName(agentId));
 		appointment3.setDate(date);
 
 		customer.getAppointments().add(appointment3);
+	}
+
+	public static String getAgentName (String agentId ){
+		for(Agent agent: agentList){
+			if(agent.getAgentId().equalsIgnoreCase(agentId)) {
+				return agent.getFirstName() + " " + agent.getLastName();
+			}
+		}
+
+		return null;
 	}
 
 }

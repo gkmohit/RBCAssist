@@ -89,4 +89,20 @@ public class Appointment implements Serializable, Comparable<Appointment> {
 	public int compareTo(Appointment another) {
 		return this.getDate().compareTo(another.getDate());
 	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		Appointment that = (Appointment) o;
+
+		return getAppointmentId() == that.getAppointmentId();
+
+	}
+
+	@Override
+	public int hashCode() {
+		return getAppointmentId();
+	}
 }

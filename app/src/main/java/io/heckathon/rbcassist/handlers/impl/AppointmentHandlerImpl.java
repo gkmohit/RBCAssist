@@ -178,7 +178,7 @@ public class AppointmentHandlerImpl {
 		appointments.remove(appointmentId);
 	}
 
-	public static void addAppointment(String customerId, String agentId, String serviceId, String location, Date date){
+	public static void addAppointment(String customerId, String agentId, String serviceId, String location, Date date, int waittime){
 
 		Customer customer = getCustomer(customerId);
 		Appointment appointment3 = new Appointment();
@@ -206,5 +206,11 @@ public class AppointmentHandlerImpl {
 	public static List<Agent> getAgentList (){
 		return agentList;
 	}
+
+	public static int getWaitTime(){
+		return (int)(Math.random() * 15);
+	}
+
+
 
 }

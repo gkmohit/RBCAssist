@@ -32,6 +32,10 @@
             android:name=".ConfirmationActivity"
             android:label="@string/title_activity_confirmation" >
         </activity>
+        <activity
+            android:name=".CallLater"
+            android:label="@string/title_activity_call_later" >
+        </activity>
     </application>
 
 </manifest>

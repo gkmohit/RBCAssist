@@ -1,7 +1,6 @@
 package com.unknown.gkmohit.rbcassist;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -51,7 +50,7 @@ public class ConfirmationActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         Intent intent = getIntent();
 
-        Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+        //Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
 
         mCustomer = (Customer) intent.getSerializableExtra("customer");
 

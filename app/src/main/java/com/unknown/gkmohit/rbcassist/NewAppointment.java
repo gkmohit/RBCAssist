@@ -91,16 +91,31 @@ public class NewAppointment extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //String customerId = new String(mCustomer.getCustomerId());
-                String serviceId = new String(StaticDataHanlder.getServiceId(mTypeSpinner.getSelectedItem().toString()));
-                int waitTime = AppointmentHandlerImpl.getWaitTime();
-                String category = new String(StaticDataHanlder.getAccountId(mCategorySpinner.getSelectedItem().toString()));
-                Intent myIntent = new Intent(NewAppointment.this, ConfirmationActivity.class);
-                //Optional parameters
-                myIntent.putExtra("customer", mCustomer);
-                myIntent.putExtra("serviceId", serviceId);
-                myIntent.putExtra("waitTime", waitTime);
-                myIntent.putExtra("category", category);
-                NewAppointment.this.startActivity(myIntent);
+                if(mUrgencySpinner.getSelectedItem().toString().equals(StaticDataHanlder.getUrgencyType("1"))){
+                    String serviceId = new String(StaticDataHanlder.getServiceId(mTypeSpinner.getSelectedItem().toString()));
+                    int waitTime = AppointmentHandlerImpl.getWaitTime();
+                    String category = new String(StaticDataHanlder.getAccountId(mCategorySpinner.getSelectedItem().toString()));
+                    Intent myIntent = new Intent(NewAppointment.this, ConfirmationActivity.class);
+                    //Optional parameters
+                    myIntent.putExtra("customer", mCustomer);
+                    myIntent.putExtra("serviceId", serviceId);
+                    myIntent.putExtra("waitTime", waitTime);
+                    myIntent.putExtra("category", category);
+                    NewAppointment.this.startActivity(myIntent);
+                }
+                else{
+                    String serviceId = new String(StaticDataHanlder.getServiceId(mTypeSpinner.getSelectedItem().toString()));
+                    int waitTime = AppointmentHandlerImpl.getWaitTime();
+                    String category = new String(StaticDataHanlder.getAccountId(mCategorySpinner.getSelectedItem().toString()));
+                    Intent myIntent = new Intent(NewAppointment.this, CallLater.class);
+                    //Optional parameters
+                    myIntent.putExtra("customer", mCustomer);
+                    myIntent.putExtra("serviceId", serviceId);
+                    myIntent.putExtra("waitTime", waitTime);
+                    myIntent.putExtra("category", category);
+                    NewAppointment.this.startActivity(myIntent);
+                }
+
 
             }
         });

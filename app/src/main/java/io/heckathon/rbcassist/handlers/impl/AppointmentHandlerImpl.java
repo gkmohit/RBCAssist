@@ -195,6 +195,7 @@ public class AppointmentHandlerImpl {
 		appointment3.setAgentName(getAgentName(agentId));
 		if(date!=null) {
 			appointment3.setDate(date);
+			appointment3.setStrDate(dateFormatter.format(date));
 		} else {
 			Calendar cal = Calendar.getInstance();
 			cal.add(Calendar.MINUTE, waittime);

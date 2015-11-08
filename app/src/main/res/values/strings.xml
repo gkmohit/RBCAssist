@@ -8,4 +8,5 @@
     <string name="title_activity_new_appointment">NewAppointment</string>
     <string name="title_activity_confirmation">ConfirmationActivity</string>
     <string name="title_activity_call_later">CallLater</string>
+    <string name="title_activity_feedback">FeedbackActivity</string>
 </resources>

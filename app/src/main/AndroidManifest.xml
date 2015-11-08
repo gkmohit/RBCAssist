@@ -36,6 +36,10 @@
             android:name=".CallLater"
             android:label="@string/title_activity_call_later" >
         </activity>
+        <activity
+            android:name=".FeedbackActivity"
+            android:label="@string/title_activity_feedback" >
+        </activity>
     </application>
 
 </manifest>

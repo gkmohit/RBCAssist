@@ -43,7 +43,6 @@
             >
 
             <TableRow>
-
                 <TextView
                     android:text="DATE"
                     android:gravity="center"
@@ -64,11 +63,12 @@
                     android:textSize="@dimen/tableHeading_text_size"
                     android:id="@+id/typeCol"/>
                 <TextView
-                    android:text="TYPE"
+                    android:text="STATUS"
                     android:gravity="center"
                     android:padding="3dp"
                     android:textSize="@dimen/tableHeading_text_size"
                     android:id="@+id/typeStatus"/>
+
             </TableRow>
 
         </TableLayout>

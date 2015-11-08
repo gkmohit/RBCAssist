@@ -1,6 +1,7 @@
 package com.unknown.gkmohit.rbcassist;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -34,6 +35,9 @@ public class ConfirmationActivity extends AppCompatActivity {
     @Bind(R.id.confirmButton)
     Button mConfirmButton;
 
+//    @Bind(R.id.calenderButton)
+//    Button mCalenderButton;
+
     Customer mCustomer = new Customer();
     int mWaitTime = 0;
     String mServiceId = new String();
@@ -46,6 +50,8 @@ public class ConfirmationActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         Intent intent = getIntent();
+
+        Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
 
         mCustomer = (Customer) intent.getSerializableExtra("customer");
 
@@ -90,5 +96,10 @@ public class ConfirmationActivity extends AppCompatActivity {
         });
 
     }
+
+//    @Override
+//    protected void attachBaseContext(Context newBase) {
+//        super.attachBaseContext(IconicsContextWrapper.wrap(newBase));
+//    }
 
 }

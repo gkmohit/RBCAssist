@@ -11,7 +11,6 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import java.util.Collections;
 import java.util.TreeSet;
 
 import butterknife.Bind;
@@ -45,6 +44,9 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         ButterKnife.bind(this);
+
+//        Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+
 
         Intent intent = getIntent();
         mCustomer = (Customer) intent.getSerializableExtra("customer");

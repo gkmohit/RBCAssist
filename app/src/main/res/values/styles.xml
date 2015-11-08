@@ -4,4 +4,6 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
     </style>
+    <string name="icon_heart">&#xf004;</string>
+    <string name="calendar_minus_o">&#xf272;</string>
 </resources>

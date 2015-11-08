@@ -34,6 +34,8 @@ public class NewAppointment extends AppCompatActivity {
     @Bind(R.id.nextButton)
     Button mNextButton;
 
+//    @Bind(R.id.like) Button mLike;
+
     Customer mCustomer = new Customer();
 
     @Override
@@ -42,6 +44,8 @@ public class NewAppointment extends AppCompatActivity {
         setContentView(R.layout.activity_new_appointment);
 
         ButterKnife.bind(this);
+//        Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+//        mLike.setTypeface(font);
         Intent intent = getIntent();
         mCustomer = (Customer) intent.getSerializableExtra("customer");
 

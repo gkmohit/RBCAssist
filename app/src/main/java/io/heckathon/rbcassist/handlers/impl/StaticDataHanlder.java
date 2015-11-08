@@ -15,8 +15,8 @@ public class StaticDataHanlder {
 	
 	static {
 		
-		ServiceType service1 = new ServiceType("1","In Branch");
-		ServiceType service2 = new ServiceType("2","Call");
+		ServiceType service1 = new ServiceType("1","Call");
+		ServiceType service2 = new ServiceType("2","In Branch");
 		serviceList.add(service1);
 		serviceList.add(service2);
 

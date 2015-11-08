@@ -152,7 +152,7 @@ public class AppointmentHandlerImpl {
 	public static Customer authenticate(String username, String password){
 
 		for(Customer cust:customerList){
-			if(cust.getUsername().equalsIgnoreCase(username)) {
+			if(cust.getUsername().equalsIgnoreCase(username) && cust.getPassword().equals(password) ) {
 				return cust;
 			}
 		}

@@ -15,7 +15,7 @@ public class AppointmentHandlerImpl {
 
 	private static final List<Customer> customerList = new ArrayList<Customer>();
 	private static final List<Agent> agentList = new ArrayList<Agent>();
-	private static final SimpleDateFormat dateFormatter = new SimpleDateFormat("YYYY/MM/dd hh:mm:ss");
+	private static final SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
 
 	private static int appointmentCounter = 1;
 

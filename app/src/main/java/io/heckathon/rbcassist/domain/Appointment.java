@@ -21,6 +21,10 @@ public class Appointment implements Serializable, Comparable<Appointment> {
 
 	private String status;
 
+	private String rating;
+
+	private String comments;
+
 	public int getAppointmentId() {
 		return appointmentId;
 	}
@@ -59,6 +63,21 @@ public class Appointment implements Serializable, Comparable<Appointment> {
 
 	public String strDate;
 
+	public String getRating() {
+		return rating;
+	}
+
+	public void setRating(String rating) {
+		this.rating = rating;
+	}
+
+	public String getComments() {
+		return comments;
+	}
+
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
 
 	public String getStrDate() {
 		return strDate;

@@ -58,19 +58,21 @@ public class AppointmentHandlerImpl {
 		appointment1.setAgentName(getAgentName(agent1.getAgentId()));
 		appointment1.setServiceTypeId("1");
 		appointment1.setCustomerId(customer1.getCustomerId());
+		appointment1.setStatus("Processing");
 		Calendar cal1 = Calendar.getInstance();
-		cal1.set(2015, 11, 30, 12, 30, 0);
+		cal1.set(2015, 9, 30, 12, 30, 0);
 		appointment1.setDate(cal1.getTime());
 		appointment1.setStrDate(dateFormatter.format(cal1.getTime()));
 
 		Appointment appointment2 = new Appointment();
 		appointment2.setAppointmentId(appointmentCounter++);
-		appointment2.setAgentId(agent1.getAgentId());
+		appointment2.setAgentId(agent2.getAgentId());
 		appointment2.setAgentName(getAgentName(agent2.getAgentId()));
-		appointment2.setServiceTypeId("1");
+		appointment2.setServiceTypeId("2");
+		appointment2.setStatus("Completed");
 		appointment2.setCustomerId(customer1.getCustomerId());
 		Calendar cal2 = Calendar.getInstance();
-		cal2.set(2015, 11, 29, 11, 30, 0);
+		cal2.set(2015, 9, 29, 11, 30, 0);
 		appointment2.setDate(cal2.getTime());
 		appointment2.setStrDate(dateFormatter.format(cal2.getTime()));
 

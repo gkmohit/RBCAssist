@@ -9,8 +9,72 @@
                 tools:context="com.unknown.gkmohit.rbcassist.PastAppointments">
 
     <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:text="Hello John Doe,"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/greetingTV"
+        android:textSize="@dimen/text_view_text_size"
+        android:textColor="@color/application_text_color"/>
+
+    <TextView
+        android:text="Your past appointments "
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentAppointmentsTV"
+        android:textSize="@dimen/text_view_text_size"
+        android:layout_below="@+id/greetingTV"
+        android:textColor="@color/application_text_color"
+        android:gravity="center"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentAppointmentsTV"
+        android:layout_centerHorizontal="true"
+        android:weightSum="5"
+        android:id="@+id/linearLayout">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/currentAppointmentsTable"
+            android:orientation="horizontal"
+            android:stretchColumns="*"
+            >
+
+            <TableRow>
+
+                <TextView
+                    android:text="DATE"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:textSize="@dimen/tableHeading_text_size"
+                    android:id="@+id/dateCol"/>
+                <!--<TextView-->
+
+                <!--android:text="AGENT"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="3dp"-->
+                <!--android:textSize="@dimen/tableHeading_text_size"-->
+                <!--android:id="@+id/agentCol"/>-->
+                <TextView
+                    android:text="TYPE"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:textSize="@dimen/tableHeading_text_size"
+                    android:id="@+id/typeCol"/>
+                <TextView
+                    android:text="TYPE"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:textSize="@dimen/tableHeading_text_size"
+                    android:id="@+id/typeStatus"/>
+            </TableRow>
+
+        </TableLayout>
+
+
+    </LinearLayout>
+
 
 </RelativeLayout>

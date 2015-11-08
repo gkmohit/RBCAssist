@@ -28,10 +28,10 @@
         android:text="Rating"
         android:textColor="@color/application_text_color"
         android:id="@+id/ratingTitleTV"
-        android:layout_below="@+id/serviceTypeTV"
+        android:layout_marginBottom="40dp"
+        android:layout_above="@+id/ratingBar"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="43dp"/>
+        android:layout_alignParentStart="true"/>
 
     <RatingBar
         android:layout_width="wrap_content"
@@ -40,30 +40,9 @@
         android:numStars="5"
         android:stepSize="0.1"
         android:isIndicator="true"
-        android:layout_below="@+id/ratingTitleTV"
-        android:layout_centerHorizontal="true"/>
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Agent Name"
-        android:textColor="@color/application_text_color"
-        android:id="@+id/agentNameTitleTV"
-        android:layout_below="@+id/feedbackTitleTV"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="33dp"/>
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Agent name goes here"
-        android:textColor="@color/application_text_color"
-        android:id="@+id/agentNameTitleTV"
-        android:layout_below="@+id/agentNameTitleTV"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_above="@+id/commentsTitleTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="76dp"/>
 
     <TextView
         android:layout_width="fill_parent"
@@ -72,10 +51,9 @@
         android:textColor="@color/application_text_color"
         android:text="Appointment Date"
         android:id="@+id/apointmentDateTitleTV"
-        android:layout_below="@+id/agentNameTitleTV"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="40dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -85,29 +63,8 @@
         android:id="@+id/appointmentDateTV"
         android:layout_below="@+id/apointmentDateTitleTV"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/application_text_color"
-        android:text="Service Type"
-        android:id="@+id/serviceTypeTitleTV"
-        android:layout_below="@+id/appointmentDateTV"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"/>
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Service type goes here"
-        android:textColor="@color/application_text_color"
-        android:id="@+id/serviceTypeTV"
-        android:layout_below="@+id/serviceTypeTitleTV"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_marginBottom="10dp"/>
 
     <EditText
         android:layout_width="fill_parent"
@@ -116,12 +73,10 @@
         android:ems="10"
         android:id="@+id/commentET"
         android:textColor="@color/application_text_color"
-        android:layout_below="@+id/commentsTitleTV"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:hint="Enter comments here"
         android:gravity="bottom"
-        android:layout_marginTop="15dp"
         android:layout_above="@+id/submitButton"/>
 
     <TextView
@@ -130,10 +85,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Comments"
         android:id="@+id/commentsTitleTV"
-        android:layout_below="@+id/ratingBar"
         android:textColor="@color/application_text_color"
+        android:layout_above="@+id/commentET"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="79dp"/>
 
     <Button
         android:layout_width="fill_parent"

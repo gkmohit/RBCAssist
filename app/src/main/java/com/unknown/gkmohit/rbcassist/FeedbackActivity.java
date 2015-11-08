@@ -14,20 +14,18 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.heckathon.rbcassist.domain.Appointment;
 import io.heckathon.rbcassist.domain.Customer;
-import io.heckathon.rbcassist.handlers.impl.StaticDataHanlder;
 
 public class FeedbackActivity extends AppCompatActivity {
 
 
     //Member variables
-    @Bind(R.id.agentNameTitleTV)
-    TextView mAgentNameTV;
+//    @Bind(R.id.agentNameTitleTV)
+//    TextView mAgentNameTV;
 
     @Bind(R.id.appointmentDateTV)
     TextView mAppointmentDateTV;
 
-    @Bind(R.id.serviceTypeTV)
-    TextView mServiceTypeTV;
+
 
     @Bind(R.id.ratingBar)
     RatingBar mRatingBar;
@@ -51,9 +49,9 @@ public class FeedbackActivity extends AppCompatActivity {
         mCustomer = (Customer) intent.getSerializableExtra("customer");
         mAppointment = (Appointment) intent.getSerializableExtra("appointment");
 
-        mAgentNameTV.setText(mAppointment.getAgentName());
+//        mAgentNameTV.setText(mAppointment.getAgentName());
         mAppointmentDateTV.setText(mAppointment.getStrDate());
-        mServiceTypeTV.setText(StaticDataHanlder.getServiceType(mAppointment.getServiceTypeId()));
+
         mRatingBar.setRating(5);
 
         mSubmitButton.setOnClickListener(new View.OnClickListener() {

@@ -57,6 +57,17 @@ public class Appointment implements Serializable, Comparable<Appointment> {
 		return serviceTypeId;
 	}
 
+	public String strDate;
+
+
+	public String getStrDate() {
+		return strDate;
+	}
+
+	public void setStrDate(String strDate) {
+		this.strDate = strDate;
+	}
+
 	public String getAgentName() {
 		return agentName;
 	}

@@ -4,6 +4,7 @@ import io.heckathon.rbcassist.domain.Agent;
 import io.heckathon.rbcassist.domain.Appointment;
 import io.heckathon.rbcassist.domain.Customer;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -14,6 +15,7 @@ public class AppointmentHandlerImpl {
 
 	private static final List<Customer> customerList = new ArrayList<Customer>();
 	private static final List<Agent> agentList = new ArrayList<Agent>();
+	private static final SimpleDateFormat dateFormatter = new SimpleDateFormat("YYYY/MM/dd hh:mm:ss");
 
 	private static int appointmentCounter = 1;
 
@@ -59,6 +61,7 @@ public class AppointmentHandlerImpl {
 		Calendar cal1 = Calendar.getInstance();
 		cal1.set(2015, 11, 30, 12, 30, 0);
 		appointment1.setDate(cal1.getTime());
+		appointment1.setStrDate(dateFormatter.format(cal1.getTime()));
 
 		Appointment appointment2 = new Appointment();
 		appointment2.setAppointmentId(appointmentCounter++);
@@ -69,6 +72,7 @@ public class AppointmentHandlerImpl {
 		Calendar cal2 = Calendar.getInstance();
 		cal2.set(2015, 11, 29, 11, 30, 0);
 		appointment2.setDate(cal2.getTime());
+		appointment2.setStrDate(dateFormatter.format(cal2.getTime()));
 
 		Appointment appointment3 = new Appointment();
 		appointment3.setAppointmentId(appointmentCounter++);
@@ -79,6 +83,7 @@ public class AppointmentHandlerImpl {
 		Calendar cal3 = Calendar.getInstance();
 		cal3.set(2015, 11, 30, 12, 30, 0);
 		appointment3.setDate(cal3.getTime());
+		appointment3.setStrDate(dateFormatter.format(cal3.getTime()));
 
 		Appointment appointment4 = new Appointment();
 		appointment4.setAppointmentId(appointmentCounter++);
@@ -88,6 +93,7 @@ public class AppointmentHandlerImpl {
 		Calendar cal4 = Calendar.getInstance();
 		cal4.set(2015, 11, 29, 11, 30, 0);
 		appointment4.setDate(cal4.getTime());
+		appointment4.setStrDate(dateFormatter.format(cal4.getTime()));
 
 		customer1.getCompletedAppointments().add(appointment1);
 		customer1.getCompletedAppointments().add(appointment2);

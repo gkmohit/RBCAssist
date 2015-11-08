@@ -12,6 +12,9 @@ public class StaticDataHanlder {
 	private final static List<ServiceType> serviceList = new ArrayList<ServiceType>();
 	private final static List<AccountType> accountList = new ArrayList<AccountType>();
 	private final static List<UrgencyType> urgencyTypeList = new ArrayList<UrgencyType>();
+	private final static List<String> timeSlots = new ArrayList<String>();
+	private final static List<String> dateSlots = new ArrayList<String>();
+
 	
 	static {
 		
@@ -33,7 +36,42 @@ public class StaticDataHanlder {
 		accountList.add(acct2);
 		accountList.add(acct3);
 		accountList.add(acct4);
-		
+
+		timeSlots.add("08:00 AM");
+		timeSlots.add("08:30 AM");
+		timeSlots.add("10:00 AM");
+		timeSlots.add("10:30 AM");
+		timeSlots.add("11:00 AM");
+		timeSlots.add("11:30 AM");
+		timeSlots.add("02:00 PM");
+		timeSlots.add("02:30 PM");
+		timeSlots.add("03:00 PM");
+		timeSlots.add("04:00 PM");
+		timeSlots.add("04:30 PM");
+		timeSlots.add("05:00 PM");
+		timeSlots.add("05:30 PM");
+
+		dateSlots.add("09-NOV-2015");
+		dateSlots.add("10-NOV-2015");
+		dateSlots.add("11-NOV-2015");
+		dateSlots.add("12-NOV-2015");
+		dateSlots.add("13-NOV-2015");
+		dateSlots.add("14-NOV-2015");
+		dateSlots.add("15-NOV-2015");
+		dateSlots.add("16-NOV-2015");
+		dateSlots.add("17-NOV-2015");
+		dateSlots.add("18-NOV-2015");
+		dateSlots.add("19-NOV-2015");
+		dateSlots.add("20-NOV-2015");
+		dateSlots.add("21-NOV-2015");
+		dateSlots.add("22-NOV-2015");
+		dateSlots.add("23-NOV-2015");
+		dateSlots.add("24-NOV-2015");
+		dateSlots.add("25-NOV-2015");
+
+
+
+
 	}
 		
 	
@@ -57,6 +95,14 @@ public class StaticDataHanlder {
 
 	public static List<UrgencyType> getUrgencyTypeList(){
 		return urgencyTypeList;
+	}
+
+	public static List<String> getTimeSlots(){
+		return timeSlots;
+	}
+
+	public static List<String> getDateSlots(){
+		return dateSlots;
 	}
 
 	public static String getAccountType (String accountTypeId ){

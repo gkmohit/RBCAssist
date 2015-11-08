@@ -37,9 +37,18 @@
             android:label="@string/title_activity_call_later" >
         </activity>
         <activity
+
             android:name=".FeedbackActivity"
             android:label="@string/title_activity_feedback" >
-        </activity>
+
+    </activity>
+        <acttivity
+        android:name="CallLaterConfirm"
+        android:label="@string/title_activity_call_later_confirm"
+        android:theme="@style/AppTheme">
+
+        </acttivity>
+
     </application>
 
 </manifest>

@@ -38,19 +38,53 @@ public class AppointmentHandlerImpl {
 
 
 		Agent agent1 = new Agent();
-		agent1.setFirstName("James");
-		agent1.setLastName("Bond");
-		agent1.setAgentId("jbond");
-		agent1.setUsername("jbond");
-		agent1.setPassword("jbond");
+		agent1.setFirstName("David");
+		agent1.setLastName("Paul");
+		agent1.setAgentId("dpaul");
+		agent1.setUsername("dpaul");
+		agent1.setPassword("dpaul");
 
 		Agent agent2 = new Agent();
-		agent2.setFirstName("John");
-		agent2.setLastName("McClane");
-		agent2.setAgentId("jmcclane");
-		agent2.setUsername("jmcclane");
-		agent2.setPassword("jmcclane");
+		agent2.setFirstName("Melody");
+		agent2.setLastName("Adhami");
+		agent2.setAgentId("madhami");
+		agent2.setUsername("mdhami");
+		agent2.setPassword("mdhami");
 
+		Agent agent3 = new Agent();
+		agent3.setFirstName("Darren");
+		agent3.setLastName("Murata");
+		agent3.setAgentId("dmurata");
+		agent3.setUsername("dmurata");
+		agent3.setPassword("dmurata");
+
+		Agent agent4 = new Agent();
+		agent4.setFirstName("Stephen");
+		agent4.setLastName("Schroth");
+		agent4.setAgentId("sscroth");
+		agent4.setUsername("sscroth");
+		agent4.setPassword("sscroth");
+
+		Agent agent5 = new Agent();
+		agent5.setFirstName("James");
+		agent5.setLastName("McGuire");
+		agent5.setAgentId("jmcguire");
+		agent5.setUsername("jmcguire");
+		agent5.setPassword("jmcguire");
+
+		Agent agent6 = new Agent();
+		agent6.setFirstName("Dmitry");
+		agent6.setLastName("Barinov");
+		agent6.setAgentId("dbarinov");
+		agent6.setUsername("dbarinov");
+		agent6.setPassword("dbarinov");
+
+		Agent agent7 = new Agent();
+		agent7.setFirstName("Esteban");
+		agent7.setLastName("Contreras");
+		agent7.setAgentId("econtreras");
+		agent7.setUsername("econtreras");
+		agent7.setPassword("econtreras");
 
 		Appointment appointment1 = new Appointment();
 		appointment1.setAppointmentId(appointmentCounter++);
@@ -167,6 +201,10 @@ public class AppointmentHandlerImpl {
 		}
 
 		return null;
+	}
+
+	public static List<Agent> getAgentList (){
+		return agentList;
 	}
 
 }

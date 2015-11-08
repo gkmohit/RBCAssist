@@ -2,6 +2,7 @@ package io.heckathon.rbcassist.handlers.impl;
 
 import io.heckathon.rbcassist.domain.AccountType;
 import io.heckathon.rbcassist.domain.ServiceType;
+import io.heckathon.rbcassist.domain.UrgencyType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ public class StaticDataHanlder {
 	
 	private final static List<ServiceType> serviceList = new ArrayList<ServiceType>();
 	private final static List<AccountType> accountList = new ArrayList<AccountType>();
+	private final static List<UrgencyType> urgencyTypeList = new ArrayList<UrgencyType>();
 	
 	static {
 		
@@ -17,6 +19,11 @@ public class StaticDataHanlder {
 		ServiceType service2 = new ServiceType("2","Call");
 		serviceList.add(service1);
 		serviceList.add(service2);
+
+		UrgencyType urgencyType1 = new UrgencyType("1","Call Now");
+		UrgencyType urgencyType2 = new UrgencyType("2","Call Later");
+		urgencyTypeList.add(urgencyType1);
+		urgencyTypeList.add(urgencyType2);
 
 		AccountType acct1 = new AccountType("1","Savings");
 		AccountType acct2 = new AccountType("2","Checking");
@@ -48,10 +55,24 @@ public class StaticDataHanlder {
 		return accountList;
 	}
 
+	public static List<UrgencyType> getUrgencyTypeList(){
+		return urgencyTypeList;
+	}
+
 	public static String getAccountType (String accountTypeId ){
 		for(AccountType acct: accountList){
 			if(acct.getAccountTypeId().equalsIgnoreCase(accountTypeId)) {
 				return acct.getAccountType();
+			}
+		}
+
+		return null;
+	}
+
+	public static String getUrgencyType(String urgencyTypeId ){
+		for(UrgencyType urgencyType: urgencyTypeList){
+			if(urgencyType.getUrgencyTypeId().equalsIgnoreCase(urgencyTypeId)) {
+				return urgencyType.getUrgencyType();
 			}
 		}
 

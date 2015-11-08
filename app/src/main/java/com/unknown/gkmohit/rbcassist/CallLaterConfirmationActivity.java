@@ -44,7 +44,7 @@ public class CallLaterConfirmationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_confirmation);
+        setContentView(R.layout.activity_call_later_confirmation);
 
         ButterKnife.bind(this);
         Intent intent = getIntent();
@@ -93,6 +93,7 @@ public class CallLaterConfirmationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //String customerId, String agentId, String serviceId, String location, Date date, int waittime
+                System.out.println("Date : " + mAppointment.getDate() );
                 AppointmentHandlerImpl.addAppointment(mCustomer.getCustomerId(), mAppointment.getAgentId(), mAppointment.getServiceTypeId() ,null, mAppointment.getDate() , 0);
                 Intent myIntent = new Intent(CallLaterConfirmationActivity.this, WelcomeActivity.class);
                 myIntent.putExtra("customer", mCustomer);

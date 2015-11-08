@@ -87,9 +87,9 @@ public class CallLater extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //String customerId = new String(mCustomer.getCustomerId());
-                String date = new String(StaticDataHanlder.getServiceId(mDateSpinner.getSelectedItem().toString()));
-                String time = new String(StaticDataHanlder.getAccountId(mTimeSpinner.getSelectedItem().toString()));
-                String agent = new String(StaticDataHanlder.getAccountId(mAgentSpinner.getSelectedItem().toString()));
+                String date = mDateSpinner.getSelectedItem().toString();
+                String time = mTimeSpinner.getSelectedItem().toString();
+                String agent = mAgentSpinner.getSelectedItem().toString();
                 Intent myIntent = new Intent(CallLater.this, CallLaterConfirmationActivity.class);
                 //TODO Create appoint object to pass to next intent
                 Appointment appointment = new Appointment();
@@ -110,7 +110,7 @@ public class CallLater extends AppCompatActivity {
 
                 //Optional parameters
                 myIntent.putExtra("customer", mCustomer);
-                myIntent.putExtra("apointment", appointment);
+                myIntent.putExtra("appointment", appointment);
 //                myIntent.putExtra("serviceId", serviceId);
 //                myIntent.putExtra("waitTime", waitTime);
 //                myIntent.putExtra("category", category);

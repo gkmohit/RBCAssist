@@ -188,8 +188,13 @@ public class AppointmentHandlerImpl {
 		appointment3.setServiceTypeId(serviceId);
 		appointment3.setCustomerId(customerId);
 		appointment3.setAgentName(getAgentName(agentId));
-		appointment3.setDate(date);
-
+		if(date!=null) {
+			appointment3.setDate(date);
+		} else {
+			Calendar cal = Calendar.getInstance();
+			cal.add(Calendar.MINUTE, waittime);
+			appointment3.setDate(cal.getTime());
+		}
 		customer.getAppointments().add(appointment3);
 	}
 

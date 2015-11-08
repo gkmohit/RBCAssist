@@ -22,10 +22,10 @@ public class ConfirmationActivity extends AppCompatActivity {
     @Bind(R.id.greetingTV)
     TextView mGreetingTV;
 
-    @Bind(R.id.serviceTV)
+    @Bind(R.id.agentNameTV)
     TextView mServiceTV;
 
-    @Bind(R.id.waitTimeTV)
+    @Bind(R.id.dateTV)
     TextView mWaitTimeTV;
 
     @Bind(R.id.editButton)

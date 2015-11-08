@@ -20,7 +20,7 @@ public class FeedbackActivity extends AppCompatActivity {
 
 
     //Member variables
-    @Bind(R.id.agentNameTV)
+    @Bind(R.id.agentNameTitleTV)
     TextView mAgentNameTV;
 
     @Bind(R.id.appointmentDateTV)

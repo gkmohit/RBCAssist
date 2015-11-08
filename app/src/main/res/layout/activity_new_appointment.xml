@@ -9,8 +9,81 @@
                 tools:context="com.unknown.gkmohit.rbcassist.NewAppointment">
 
     <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Please choose your category"
+        android:id="@+id/categoryTV"
+        android:textSize="@dimen/text_view_text_size"
+        android:gravity="left"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/application_text_color"
+        android:layout_marginTop="70dp"/>
 
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/categorySpinner"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/categoryTV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Create a new Appointment"
+        android:id="@+id/textView"
+        android:textSize="25dp"
+        android:textColor="@color/application_text_color"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preferred service type"
+        android:id="@+id/serviceTypeTV"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/text_view_text_size"
+        android:gravity="left"
+        android:layout_below="@+id/categorySpinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/application_text_color"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/typeSpinner"
+        android:layout_below="@+id/serviceTypeTV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Preferred Agent"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/typeSpinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/text_view_text_size"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/application_text_color"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"/>
 </RelativeLayout>

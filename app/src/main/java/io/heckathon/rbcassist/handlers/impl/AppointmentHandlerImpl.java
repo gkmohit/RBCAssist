@@ -114,7 +114,7 @@ public class AppointmentHandlerImpl {
 		appointment3.setAppointmentId(appointmentCounter++);
 		appointment3.setAgentId(agent1.getAgentId());
 		appointment3.setAgentName(getAgentName(agent1.getAgentId()));
-		appointment3.setServiceTypeId("1");
+		appointment3.setServiceTypeId("2");
 		appointment3.setCustomerId(customer1.getCustomerId());
 		Calendar cal3 = Calendar.getInstance();
 		cal3.set(2015, 11, 30, 12, 30, 0);
@@ -124,7 +124,7 @@ public class AppointmentHandlerImpl {
 		Appointment appointment4 = new Appointment();
 		appointment4.setAppointmentId(appointmentCounter++);
 		appointment3.setAgentName(getAgentName(agent2.getAgentId()));
-		appointment4.setServiceTypeId("1");
+		appointment4.setServiceTypeId("2");
 		appointment4.setCustomerId(customer1.getCustomerId());
 		Calendar cal4 = Calendar.getInstance();
 		cal4.set(2015, 11, 29, 11, 30, 0);
@@ -194,8 +194,11 @@ public class AppointmentHandlerImpl {
 			Calendar cal = Calendar.getInstance();
 			cal.add(Calendar.MINUTE, waittime);
 			appointment3.setDate(cal.getTime());
+			appointment3.setStrDate(dateFormatter.format(cal.getTime()));
+
 		}
 		customer.getAppointments().add(appointment3);
+		customerList.add(customer);
 	}
 
 	public static String getAgentName (String agentId ){

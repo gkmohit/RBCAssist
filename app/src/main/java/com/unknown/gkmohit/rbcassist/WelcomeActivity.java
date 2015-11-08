@@ -11,10 +11,14 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.util.Collections;
+import java.util.TreeSet;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.heckathon.rbcassist.domain.Appointment;
 import io.heckathon.rbcassist.domain.Customer;
+import io.heckathon.rbcassist.handlers.impl.AppointmentHandlerImpl;
 import io.heckathon.rbcassist.handlers.impl.StaticDataHanlder;
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -44,13 +48,16 @@ public class WelcomeActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         mCustomer = (Customer) intent.getSerializableExtra("customer");
+        mCustomer = AppointmentHandlerImpl.getCustomer(mCustomer.getCustomerId());
         String greetingText = "Hello " + mCustomer.getFirstName() + " " + mCustomer.getLastName() + ",";
         mGreetingTV.setText(greetingText);
 
         mCurrentAppointmentsTable.setColumnStretchable(0, true);
         mCurrentAppointmentsTable.setColumnStretchable(1, true);
         mCurrentAppointmentsTable.setColumnStretchable(2, true);
-        for(Appointment appointment : mCustomer.getAppointments()){
+        TreeSet<Appointment> myTreeSet = new TreeSet<Appointment>();
+        myTreeSet.addAll(mCustomer.getAppointments());
+        for(Appointment appointment : myTreeSet){
 
             TextView dateTV = new TextView(this);
             TextView agentTV = new TextView(this);

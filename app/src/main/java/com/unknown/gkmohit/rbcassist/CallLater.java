@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import butterknife.Bind;
@@ -36,6 +38,8 @@ public class CallLater extends AppCompatActivity {
 //    @Bind(R.id.like) Button mLike;
 
     Customer mCustomer = new Customer();
+    String serviceId = null;
+    String category = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +50,9 @@ public class CallLater extends AppCompatActivity {
 //        mLike.setTypeface(font);
         Intent intent = getIntent();
         mCustomer = (Customer) intent.getSerializableExtra("customer");
+        serviceId = (String)intent.getSerializableExtra("serviceId");
+        category = (String)intent.getSerializableExtra("category");
+
 
         //Agent Names
         //
@@ -80,12 +87,27 @@ public class CallLater extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //String customerId = new String(mCustomer.getCustomerId());
-                String serviceId = new String(StaticDataHanlder.getServiceId(mDateSpinner.getSelectedItem().toString()));
-                int waitTime = AppointmentHandlerImpl.getWaitTime();
-                String category = new String(StaticDataHanlder.getAccountId(mTimeSpinner.getSelectedItem().toString()));
+                String date = new String(StaticDataHanlder.getServiceId(mDateSpinner.getSelectedItem().toString()));
+                String time = new String(StaticDataHanlder.getAccountId(mTimeSpinner.getSelectedItem().toString()));
+                String agent = new String(StaticDataHanlder.getAccountId(mAgentSpinner.getSelectedItem().toString()));
                 Intent myIntent = new Intent(CallLater.this, CallLaterConfirmationActivity.class);
                 //TODO Create appoint object to pass to next intent
                 Appointment appointment = new Appointment();
+                appointment.setStatus("New");
+                appointment.setAgentName(agent);
+                appointment.setServiceTypeId(serviceId);
+                SimpleDateFormat sdf = new SimpleDateFormat(("dd-MMM-yyyy hh:mm a"));
+                SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+
+                try {
+                    appointment.setDate(sdf.parse(date + " " + time));
+                    appointment.setStrDate(dateFormatter.format(appointment.getDate()));
+
+                }catch (ParseException e){
+
+                }
+
+
                 //Optional parameters
                 myIntent.putExtra("customer", mCustomer);
                 myIntent.putExtra("apointment", appointment);

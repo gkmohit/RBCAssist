@@ -78,4 +78,34 @@ public class StaticDataHanlder {
 
 		return null;
 	}
+
+	public static String getServiceId (String serviceType ){
+		for(ServiceType service: serviceList){
+			if(service.getServiceType().equalsIgnoreCase(serviceType)) {
+				return service.getServiceTypeId();
+			}
+		}
+
+		return null;
+	}
+
+	public static String getAccountId (String accountType ){
+		for(AccountType acct: accountList){
+			if(acct.getAccountType().equalsIgnoreCase(accountType)) {
+				return acct.getAccountTypeId();
+			}
+		}
+
+		return null;
+	}
+
+	public static String getUrgencyTypeId(String urgencyTypeDesc ){
+		for(UrgencyType urgencyType: urgencyTypeList){
+			if(urgencyType.getUrgencyType().equalsIgnoreCase(urgencyTypeDesc)) {
+				return urgencyType.getUrgencyTypeId();
+			}
+		}
+
+		return null;
+	}
 }

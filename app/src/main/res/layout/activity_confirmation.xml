@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Service"
-        android:id="@+id/serviceTitleTV"
+        android:id="@+id/agentNameTitleTV"
         android:layout_below="@+id/categoryTV"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"/>
@@ -65,8 +65,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Enter service here"
-        android:id="@+id/serviceTV"
-        android:layout_below="@+id/serviceTitleTV"
+        android:id="@+id/agentNameTV"
+        android:layout_below="@+id/agentNameTitleTV"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
@@ -75,8 +75,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Wait time"
-        android:id="@+id/waitTimeTitleTV"
-        android:layout_below="@+id/serviceTV"
+        android:id="@+id/dateTitleTV"
+        android:layout_below="@+id/agentNameTV"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="46dp"/>
@@ -85,8 +85,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Enter wait time here"
-        android:id="@+id/waitTimeTV"
-        android:layout_below="@+id/waitTimeTitleTV"
+        android:id="@+id/dateTV"
+        android:layout_below="@+id/dateTitleTV"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
         android:text="Edit"
         android:id="@+id/editButton"
-        android:layout_below="@+id/waitTimeTV"
+        android:layout_below="@+id/dateTV"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="61dp"
         android:textColor="@color/button_text_color"

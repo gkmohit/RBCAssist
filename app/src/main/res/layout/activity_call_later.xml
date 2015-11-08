@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Date"
-        android:id="@+id/dateTV"
+        android:id="@+id/dateTitleTV"
         android:layout_marginTop="20dp"
         android:textSize="@dimen/text_view_text_size"
         android:gravity="left"
@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/dateSpinner"
-        android:layout_below="@+id/dateTV"
+        android:layout_below="@+id/dateTitleTV"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp"/>

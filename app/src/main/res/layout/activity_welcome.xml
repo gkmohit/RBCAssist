@@ -9,20 +9,100 @@
                 tools:context="com.unknown.gkmohit.rbcassist.WelcomeActivity">
 
     <TextView
-        android:text="Hello ,"
+        android:text="Hello John Doe,"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/greetingTV"
         android:textSize="@dimen/text_view_text_size"
         android:textColor="@color/application_text_color"/>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
+    <TextView
+        android:text="Your current appointments "
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/currentAppointmentsTV"
+        android:textSize="@dimen/text_view_text_size"
         android:layout_below="@+id/greetingTV"
+        android:textColor="@color/application_text_color"
+        android:gravity="center"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/currentAppointmentsTV"
+
         android:layout_centerHorizontal="true"
-        android:weightSum="2">
+        android:weightSum="5"
+        android:id="@+id/linearLayout">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="386dp"
+            android:id="@+id/currentAppointmentsTable"
+            android:orientation="horizontal"
+            android:stretchColumns="*"
+            >
+
+            <TableRow>
+                <TextView
+                    android:padding="3dp"
+                    android:textSize="@dimen/tableHeading_text_size"
+                    android:id="@+id/selectCol"/>
+                <TextView
+                    android:text="DATE"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:textSize="@dimen/tableHeading_text_size"
+                    android:id="@+id/dateCol"/>
+                <!--<TextView-->
+
+                    <!--android:text="AGENT"-->
+                    <!--android:gravity="center"-->
+                    <!--android:padding="3dp"-->
+                    <!--android:textSize="@dimen/tableHeading_text_size"-->
+                    <!--android:id="@+id/agentCol"/>-->
+                <TextView
+                    android:text="TYPE"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:textSize="@dimen/tableHeading_text_size"
+                    android:id="@+id/typeCol"/>
+            </TableRow>
+
+        </TableLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel Appointments"
+            android:id="@+id/cancelAppointmentsButton"
+            android:layout_weight="1"
+            android:textColor="@color/button_text_color"
+            android:layout_marginBottom="3dp"
+            android:background="@color/button_background_color"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Past Appointments"
+            android:id="@+id/pastAppointmentsButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textColor="@color/button_text_color"
+            android:layout_marginBottom="3dp"
+            android:background="@color/button_background_color"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create new appointment"
+            android:id="@+id/createNewAppointmentButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textColor="@color/button_text_color"
+            android:background="@color/button_background_color"/>
+
     </LinearLayout>
+
+
 
 </RelativeLayout>

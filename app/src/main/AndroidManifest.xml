@@ -28,6 +28,10 @@
             android:name=".NewAppointment"
             android:label="@string/title_activity_new_appointment" >
         </activity>
+        <activity
+            android:name=".ConfirmationActivity"
+            android:label="@string/title_activity_confirmation" >
+        </activity>
     </application>
 
 </manifest>

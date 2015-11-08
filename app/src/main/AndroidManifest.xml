@@ -20,6 +20,14 @@
             android:name=".WelcomeActivity"
             android:label="@string/title_activity_welcome" >
         </activity>
+        <activity
+            android:name=".PastAppointments"
+            android:label="@string/title_activity_past_appointments" >
+        </activity>
+        <activity
+            android:name=".NewAppointment"
+            android:label="@string/title_activity_new_appointment" >
+        </activity>
     </application>
 
 </manifest>

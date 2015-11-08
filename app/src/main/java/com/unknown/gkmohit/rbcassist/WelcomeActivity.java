@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TableLayout;
@@ -46,8 +47,6 @@ public class WelcomeActivity extends AppCompatActivity {
         String greetingText = "Hello " + mCustomer.getFirstName() + " " + mCustomer.getLastName() + ",";
         mGreetingTV.setText(greetingText);
 
-
-
         mCurrentAppointmentsTable.setColumnStretchable(0, true);
         mCurrentAppointmentsTable.setColumnStretchable(1, true);
         mCurrentAppointmentsTable.setColumnStretchable(2, true);
@@ -79,6 +78,27 @@ public class WelcomeActivity extends AppCompatActivity {
             row.addView(typeTV);
             mCurrentAppointmentsTable.addView(row);
         }
+        mPastAppointmentsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent myIntent = new Intent(WelcomeActivity.this, PastAppointments.class);
+                //Optional parameters
+                myIntent.putExtra("customer", mCustomer);
+                WelcomeActivity.this.startActivity(myIntent);
+            }
+        });
+
+        mCreateNewAppointmentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(WelcomeActivity.this, NewAppointment.class);
+                //Optional parameters
+                myIntent.putExtra("customer", mCustomer);
+                WelcomeActivity.this.startActivity(myIntent);
+            }
+        });
+
     }
 
     @Override
